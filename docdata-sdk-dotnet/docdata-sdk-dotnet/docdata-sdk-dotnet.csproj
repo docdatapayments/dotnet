@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD529378-2B8E-4C4E-90AD-55AE5B59071F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>docdata_sdk_dotnet</RootNamespace>
+    <AssemblyName>docdata-sdk-dotnet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\main\cs\data\DDPaymentCluster.cs" />
+    <Compile Include="src\main\cs\data\DDStatusResponse.cs" />
+    <Compile Include="src\main\cs\data\DDPaymentDetails.cs" />
+    <Compile Include="src\main\cs\data\DDAddress.cs" />
+    <Compile Include="src\main\cs\data\DDClient.cs" />
+    <Compile Include="src\main\cs\data\DDConfig.cs" />
+    <Compile Include="src\main\cs\data\DDCreateResponse.cs" />
+    <Compile Include="src\main\cs\data\DDDestination.cs" />
+    <Compile Include="src\main\cs\data\DDMerchant.cs" />
+    <Compile Include="src\main\cs\data\DDMoney.cs" />
+    <Compile Include="src\main\cs\data\DDName.cs" />
+    <Compile Include="src\main\cs\data\DDPaymentReference.cs" />
+    <Compile Include="src\main\cs\data\DDPaymentResponse.cs" />
+    <Compile Include="src\main\cs\DDOperation.cs" />
+    <Compile Include="src\main\cs\exception\DDRequestNewTokenCompletedException.cs" />
+    <Compile Include="src\main\cs\exception\DDTokenNotRecognizedException.cs" />
+    <Compile Include="src\main\cs\exception\DDNoPaymentInStatusReportException.cs" />
+    <Compile Include="src\main\cs\exception\DDInsufficientDataException.cs" />
+    <Compile Include="src\main\cs\exception\DDPaymentErrorException.cs" />
+    <Compile Include="src\main\cs\exception\DDWSException.cs" />
+    <Compile Include="src\main\cs\exception\RuntimeException.cs" />
+    <Compile Include="src\main\cs\request\PaymentMenuRequest.cs" />
+    <Compile Include="src\main\cs\ws\payment\PaymentServiceClient.cs" />
+    <Compile Include="src\main\cs\ws\payment\PaymentServiceClientImpl.cs" />
+    <Compile Include="src\main\cs\ws\WCFUtil.cs" />
+    <Compile Include="target\services\paymentService.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="src\main\resources\*" />
+    <None Include="src\main\resources\docdata-ws\*" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+    <MakeDir Directories="target\services" />
+    <Exec Command="svcutil /wrapped /namespace:*,DocDataWSNameSpace /directory:target\services src\main\resources\docdata-ws\paymentservice.wsdl src\main\resources\docdata-ws\types.xsd src\main\resources\docdata-ws\paymentservice.xsd" />
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

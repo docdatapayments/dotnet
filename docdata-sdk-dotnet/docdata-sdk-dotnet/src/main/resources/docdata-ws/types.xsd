@@ -1,0 +1,2810 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ddp="http://www.docdatapayments.com/services/paymentservice/1_0/"
+        targetNamespace="http://www.docdatapayments.com/services/paymentservice/1_0/" elementFormDefault="qualified">
+
+	<complexType name="country">
+		<annotation>
+			<documentation>Country code according to ISO 3166.</documentation>
+		</annotation>
+		<attribute name="code" use="required" type="ddp:countryCode" />
+	</complexType>
+
+	<complexType name="language">
+		<annotation>
+			<documentation>Language code according to ISO 639.</documentation>
+		</annotation>
+		<attribute name="code" use="required" type="ddp:languageCode" />
+	</complexType>
+
+	<simpleType name="languageCode">
+		<annotation>
+			<documentation>ISO 639-1:2002 Part 1: Alpha-2 Language Codes
+			</documentation>
+		</annotation>
+		<restriction base="NMTOKEN">
+			<enumeration value="aa">
+				<annotation>
+					<documentation>Afar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ab">
+				<annotation>
+					<documentation>Abkhazian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="af">
+				<annotation>
+					<documentation>Afrikaans</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="am">
+				<annotation>
+					<documentation>Amharic</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ar">
+				<annotation>
+					<documentation>Arabic</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="as">
+				<annotation>
+					<documentation>Assamese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ay">
+				<annotation>
+					<documentation>Aymara</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="az">
+				<annotation>
+					<documentation>Azerbaijani</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ba">
+				<annotation>
+					<documentation>Bashkir</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="be">
+				<annotation>
+					<documentation>Byelorussian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="bg">
+				<annotation>
+					<documentation>Bulgarian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="bh">
+				<annotation>
+					<documentation>Bihari</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="bi">
+				<annotation>
+					<documentation>Bislama</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="bn">
+				<annotation>
+					<documentation>Bengali; Bangla</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="bo">
+				<annotation>
+					<documentation>Tibetan</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="br">
+				<annotation>
+					<documentation>Breton</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ca">
+				<annotation>
+					<documentation>Catalan</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="co">
+				<annotation>
+					<documentation>Corsican</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="cs">
+				<annotation>
+					<documentation>Czech</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="cy">
+				<annotation>
+					<documentation>Welsh</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="da">
+				<annotation>
+					<documentation>Danish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="de">
+				<annotation>
+					<documentation>German</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="dz">
+				<annotation>
+					<documentation>Bhutani</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="el">
+				<annotation>
+					<documentation>Greek</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="en">
+				<annotation>
+					<documentation>English</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="eo">
+				<annotation>
+					<documentation>Esperanto</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="es">
+				<annotation>
+					<documentation>Spanish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="et">
+				<annotation>
+					<documentation>Estonian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="eu">
+				<annotation>
+					<documentation>Basque</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="fa">
+				<annotation>
+					<documentation>Persian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="fi">
+				<annotation>
+					<documentation>Finnish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="fj">
+				<annotation>
+					<documentation>Fiji</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="fo">
+				<annotation>
+					<documentation>Faroese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="fr">
+				<annotation>
+					<documentation>French</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="fy">
+				<annotation>
+					<documentation>Frisian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ga">
+				<annotation>
+					<documentation>Irish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="gd">
+				<annotation>
+					<documentation>Scots Gaelic</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="gl">
+				<annotation>
+					<documentation>Galician</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="gn">
+				<annotation>
+					<documentation>Guarani</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="gu">
+				<annotation>
+					<documentation>Gujarati</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ha">
+				<annotation>
+					<documentation>Hausa</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="he">
+				<annotation>
+					<documentation>Hebrew</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="hi">
+				<annotation>
+					<documentation>Hindi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="hr">
+				<annotation>
+					<documentation>Croatian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="hu">
+				<annotation>
+					<documentation>Hungarian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="hy">
+				<annotation>
+					<documentation>Armenian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ia">
+				<annotation>
+					<documentation>Interlingua</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="id">
+				<annotation>
+					<documentation>Indonesian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ie">
+				<annotation>
+					<documentation>Interlingue</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ik">
+				<annotation>
+					<documentation>Inupiak</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="is">
+				<annotation>
+					<documentation>Icelandic</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="it">
+				<annotation>
+					<documentation>Italian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="iu">
+				<annotation>
+					<documentation>Inuktitut</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ja">
+				<annotation>
+					<documentation>Japanese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="jw">
+				<annotation>
+					<documentation>Javanese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ka">
+				<annotation>
+					<documentation>Georgian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="kk">
+				<annotation>
+					<documentation>Kazakh</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="kl">
+				<annotation>
+					<documentation>Greenlandic</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="km">
+				<annotation>
+					<documentation>Cambodian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="kn">
+				<annotation>
+					<documentation>Kannada</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ko">
+				<annotation>
+					<documentation>Korean</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ks">
+				<annotation>
+					<documentation>Kashmiri</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ku">
+				<annotation>
+					<documentation>Kurdish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ky">
+				<annotation>
+					<documentation>Kirghiz</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="la">
+				<annotation>
+					<documentation>Latin</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ln">
+				<annotation>
+					<documentation>Lingala</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="lo">
+				<annotation>
+					<documentation>Laothian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="lt">
+				<annotation>
+					<documentation>Lithuanian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="lv">
+				<annotation>
+					<documentation>Latvian; Lettish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mg">
+				<annotation>
+					<documentation>Malagasy</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mi">
+				<annotation>
+					<documentation>Maori</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mk">
+				<annotation>
+					<documentation>Macedonian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ml">
+				<annotation>
+					<documentation>Malayalam</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mn">
+				<annotation>
+					<documentation>Mongolian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mo">
+				<annotation>
+					<documentation>Moldavian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mr">
+				<annotation>
+					<documentation>Marathi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ms">
+				<annotation>
+					<documentation>Malay</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="mt">
+				<annotation>
+					<documentation>Maltese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="my">
+				<annotation>
+					<documentation>Burmese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="na">
+				<annotation>
+					<documentation>Nauru</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ne">
+				<annotation>
+					<documentation>Nepali</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="nl">
+				<annotation>
+					<documentation>Dutch</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="no">
+				<annotation>
+					<documentation>Norwegian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="oc">
+				<annotation>
+					<documentation>Occitan</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="om">
+				<annotation>
+					<documentation>(Afan) Oromo</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="or">
+				<annotation>
+					<documentation>Oriya</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="pa">
+				<annotation>
+					<documentation>Punjabi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="pl">
+				<annotation>
+					<documentation>Polish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ps">
+				<annotation>
+					<documentation>Pashto, Pushto</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="pt">
+				<annotation>
+					<documentation>Portuguese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="qu">
+				<annotation>
+					<documentation>Quechua</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="rm">
+				<annotation>
+					<documentation>Rhaeto-Romance</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="rn">
+				<annotation>
+					<documentation>Kirundi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ro">
+				<annotation>
+					<documentation>Romanian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ru">
+				<annotation>
+					<documentation>Russian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="rw">
+				<annotation>
+					<documentation>Kinyarwanda</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sa">
+				<annotation>
+					<documentation>Sanskrit</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sd">
+				<annotation>
+					<documentation>Sindhi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sg">
+				<annotation>
+					<documentation>Sangho</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sh">
+				<annotation>
+					<documentation>Serbo-Croatian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="si">
+				<annotation>
+					<documentation>Singhalese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sk">
+				<annotation>
+					<documentation>Slovak</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sl">
+				<annotation>
+					<documentation>Slovenian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sm">
+				<annotation>
+					<documentation>Samoan</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sn">
+				<annotation>
+					<documentation>Shona</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="so">
+				<annotation>
+					<documentation>Somali</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sq">
+				<annotation>
+					<documentation>Albanian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sr">
+				<annotation>
+					<documentation>Serbian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ss">
+				<annotation>
+					<documentation>Siswati</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="st">
+				<annotation>
+					<documentation>Sesotho</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="su">
+				<annotation>
+					<documentation>Sundanese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sv">
+				<annotation>
+					<documentation>Swedish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="sw">
+				<annotation>
+					<documentation>Swahili</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ta">
+				<annotation>
+					<documentation>Tamil</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="te">
+				<annotation>
+					<documentation>Telugu</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tg">
+				<annotation>
+					<documentation>Tajik</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="th">
+				<annotation>
+					<documentation>Thai</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ti">
+				<annotation>
+					<documentation>Tigrinya</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tk">
+				<annotation>
+					<documentation>Turkmen</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tl">
+				<annotation>
+					<documentation>Tagalog</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tn">
+				<annotation>
+					<documentation>Setswana</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="to">
+				<annotation>
+					<documentation>Tonga</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tr">
+				<annotation>
+					<documentation>Turkish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ts">
+				<annotation>
+					<documentation>Tsonga</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tt">
+				<annotation>
+					<documentation>Tatar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="tw">
+				<annotation>
+					<documentation>Twi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ug">
+				<annotation>
+					<documentation>Uigur</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="uk">
+				<annotation>
+					<documentation>Ukrainian</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ur">
+				<annotation>
+					<documentation>Urdu</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="uz">
+				<annotation>
+					<documentation>Uzbek</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="vi">
+				<annotation>
+					<documentation>Vietnamese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="vo">
+				<annotation>
+					<documentation>Volapuk</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="wo">
+				<annotation>
+					<documentation>Wolof</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="xh">
+				<annotation>
+					<documentation>Xhosa</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="yi">
+				<annotation>
+					<documentation>Yiddish</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="yo">
+				<annotation>
+					<documentation>Yoruba</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="za">
+				<annotation>
+					<documentation>Zhuang</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="zh">
+				<annotation>
+					<documentation>Chinese</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="zu">
+				<annotation>
+					<documentation>Zulu</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+
+
+	<simpleType name="countryCode">
+		<annotation>
+			<documentation>ISO 3166-1:2006</documentation>
+		</annotation>
+		<restriction base="NMTOKEN">
+			<enumeration value="AD">
+				<annotation>
+					<documentation>ANDORRA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AE">
+				<annotation>
+					<documentation>UNITED ARAB EMIRATES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AF">
+				<annotation>
+					<documentation>AFGHANISTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AG">
+				<annotation>
+					<documentation>ANTIGUA AND BARBUDA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AI">
+				<annotation>
+					<documentation>ANGUILLA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AL">
+				<annotation>
+					<documentation>ALBANIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AM">
+				<annotation>
+					<documentation>ARMENIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AN">
+				<annotation>
+					<documentation>NETHERLANDS ANTILLES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AO">
+				<annotation>
+					<documentation>ANGOLA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AQ">
+				<annotation>
+					<documentation>ANTARCTICA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AR">
+				<annotation>
+					<documentation>ARGENTINA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AS">
+				<annotation>
+					<documentation>AMERICAN SAMOA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AT">
+				<annotation>
+					<documentation>AUSTRIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AU">
+				<annotation>
+					<documentation>AUSTRALIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AW">
+				<annotation>
+					<documentation>ARUBA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AX">
+				<annotation>
+					<documentation>ALAND ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AZ">
+				<annotation>
+					<documentation>AZERBAIJAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BA">
+				<annotation>
+					<documentation>BOSNIA AND HERZEGOVINA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BB">
+				<annotation>
+					<documentation>BARBADOS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BD">
+				<annotation>
+					<documentation>BANGLADESH</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BE">
+				<annotation>
+					<documentation>BELGIUM</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BF">
+				<annotation>
+					<documentation>BURKINA FASO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BG">
+				<annotation>
+					<documentation>BULGARIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BH">
+				<annotation>
+					<documentation>BAHRAIN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BI">
+				<annotation>
+					<documentation>BURUNDI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BJ">
+				<annotation>
+					<documentation>BENIN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BL">
+				<annotation>
+					<documentation>SAINT BARTHELEMY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BM">
+				<annotation>
+					<documentation>BERMUDA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BN">
+				<annotation>
+					<documentation>BRUNEI DARUSSALAM</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BO">
+				<annotation>
+					<documentation>BOLIVIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BR">
+				<annotation>
+					<documentation>BRAZIL</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BS">
+				<annotation>
+					<documentation>BAHAMAS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BT">
+				<annotation>
+					<documentation>BHUTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BV">
+				<annotation>
+					<documentation>BOUVET ISLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BW">
+				<annotation>
+					<documentation>BOTSWANA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BY">
+				<annotation>
+					<documentation>BELARUS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BZ">
+				<annotation>
+					<documentation>BELIZE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CA">
+				<annotation>
+					<documentation>CANADA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CC">
+				<annotation>
+					<documentation>COCOS (KEELING) ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CD">
+				<annotation>
+					<documentation>CONGO, THE DEMOCRATIC REPUBLIC OF THE
+					</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CF">
+				<annotation>
+					<documentation>CENTRAL AFRICAN REPUBLIC</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CG">
+				<annotation>
+					<documentation>CONGO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CH">
+				<annotation>
+					<documentation>SWITZERLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CI">
+				<annotation>
+					<documentation>COTE D'IVOIRE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CK">
+				<annotation>
+					<documentation>COOK ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CL">
+				<annotation>
+					<documentation>CHILE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CM">
+				<annotation>
+					<documentation>CAMEROON</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CN">
+				<annotation>
+					<documentation>CHINA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CO">
+				<annotation>
+					<documentation>COLOMBIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CR">
+				<annotation>
+					<documentation>COSTA RICA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CU">
+				<annotation>
+					<documentation>CUBA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CV">
+				<annotation>
+					<documentation>CAPE VERDE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CX">
+				<annotation>
+					<documentation>CHRISTMAS ISLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CY">
+				<annotation>
+					<documentation>CYPRUS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CZ">
+				<annotation>
+					<documentation>CZECH REPUBLIC</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DE">
+				<annotation>
+					<documentation>GERMANY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DJ">
+				<annotation>
+					<documentation>DJIBOUTI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DK">
+				<annotation>
+					<documentation>DENMARK</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DM">
+				<annotation>
+					<documentation>DOMINICA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DO">
+				<annotation>
+					<documentation>DOMINICAN REPUBLIC</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DZ">
+				<annotation>
+					<documentation>ALGERIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EC">
+				<annotation>
+					<documentation>ECUADOR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EE">
+				<annotation>
+					<documentation>ESTONIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EG">
+				<annotation>
+					<documentation>EGYPT</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EH">
+				<annotation>
+					<documentation>WESTERN SAHARA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ER">
+				<annotation>
+					<documentation>ERITREA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ES">
+				<annotation>
+					<documentation>SPAIN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ET">
+				<annotation>
+					<documentation>ETHIOPIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FI">
+				<annotation>
+					<documentation>FINLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FJ">
+				<annotation>
+					<documentation>FIJI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FK">
+				<annotation>
+					<documentation>FALKLAND ISLANDS (MALVINAS)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FM">
+				<annotation>
+					<documentation>MICRONESIA, FEDERATED STATES OF
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FO">
+				<annotation>
+					<documentation>FAROE ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FR">
+				<annotation>
+					<documentation>FRANCE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GA">
+				<annotation>
+					<documentation>GABON</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GB">
+				<annotation>
+					<documentation>UNITED KINGDOM</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GD">
+				<annotation>
+					<documentation>GRENADA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GE">
+				<annotation>
+					<documentation>GEORGIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GF">
+				<annotation>
+					<documentation>FRENCH GUIANA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GG">
+				<annotation>
+					<documentation>GUERNSEY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GH">
+				<annotation>
+					<documentation>GHANA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GI">
+				<annotation>
+					<documentation>GIBRALTAR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GL">
+				<annotation>
+					<documentation>GREENLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GM">
+				<annotation>
+					<documentation>GAMBIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GN">
+				<annotation>
+					<documentation>GUINEA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GP">
+				<annotation>
+					<documentation>GUADELOUPE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GQ">
+				<annotation>
+					<documentation>EQUATORIAL GUINEA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GR">
+				<annotation>
+					<documentation>GREECE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GS">
+				<annotation>
+					<documentation>SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS
+					</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GT">
+				<annotation>
+					<documentation>GUATEMALA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GU">
+				<annotation>
+					<documentation>GUAM</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GW">
+				<annotation>
+					<documentation>GUINEA-BISSAU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GY">
+				<annotation>
+					<documentation>GUYANA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HK">
+				<annotation>
+					<documentation>HONG KONG</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HM">
+				<annotation>
+					<documentation>HEARD ISLAND AND MCDONALD ISLANDS
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HN">
+				<annotation>
+					<documentation>HONDURAS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HR">
+				<annotation>
+					<documentation>CROATIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HT">
+				<annotation>
+					<documentation>HAITI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HU">
+				<annotation>
+					<documentation>HUNGARY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ID">
+				<annotation>
+					<documentation>INDONESIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IE">
+				<annotation>
+					<documentation>IRELAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IL">
+				<annotation>
+					<documentation>ISRAEL</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IM">
+				<annotation>
+					<documentation>ISLE OF MAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IN">
+				<annotation>
+					<documentation>INDIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IO">
+				<annotation>
+					<documentation>BRITISH INDIAN OCEAN TERRITORY
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IQ">
+				<annotation>
+					<documentation>IRAQ</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IR">
+				<annotation>
+					<documentation>IRAN, ISLAMIC REPUBLIC OF</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IS">
+				<annotation>
+					<documentation>ICELAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IT">
+				<annotation>
+					<documentation>ITALY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JE">
+				<annotation>
+					<documentation>JERSEY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JM">
+				<annotation>
+					<documentation>JAMAICA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JO">
+				<annotation>
+					<documentation>JORDAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JP">
+				<annotation>
+					<documentation>JAPAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KE">
+				<annotation>
+					<documentation>KENYA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KG">
+				<annotation>
+					<documentation>KYRGYZSTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KH">
+				<annotation>
+					<documentation>CAMBODIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KI">
+				<annotation>
+					<documentation>KIRIBATI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KM">
+				<annotation>
+					<documentation>COMOROS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KN">
+				<annotation>
+					<documentation>SAINT KITTS AND NEVIS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KP">
+				<annotation>
+					<documentation>KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF
+					</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KR">
+				<annotation>
+					<documentation>KOREA, REPUBLIC OF</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KW">
+				<annotation>
+					<documentation>KUWAIT</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KY">
+				<annotation>
+					<documentation>CAYMAN ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KZ">
+				<annotation>
+					<documentation>KAZAKHSTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LA">
+				<annotation>
+					<documentation>LAO PEOPLE'S DEMOCRATIC REPUBLIC
+					</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LB">
+				<annotation>
+					<documentation>LEBANON</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LC">
+				<annotation>
+					<documentation>SAINT LUCIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LI">
+				<annotation>
+					<documentation>LIECHTENSTEIN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LK">
+				<annotation>
+					<documentation>SRI LANKA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LR">
+				<annotation>
+					<documentation>LIBERIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LS">
+				<annotation>
+					<documentation>LESOTHO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LT">
+				<annotation>
+					<documentation>LITHUANIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LU">
+				<annotation>
+					<documentation>LUXEMBOURG</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LV">
+				<annotation>
+					<documentation>LATVIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LY">
+				<annotation>
+					<documentation>LIBYAN ARAB JAMAHIRIYA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MA">
+				<annotation>
+					<documentation>MOROCCO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MC">
+				<annotation>
+					<documentation>MONACO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MD">
+				<annotation>
+					<documentation>MOLDOVA, REPUBLIC OF</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ME">
+				<annotation>
+					<documentation>MONTENEGRO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MF">
+				<annotation>
+					<documentation>SAINT MARTIN (FRENCH PART)</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MG">
+				<annotation>
+					<documentation>MADAGASCAR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MH">
+				<annotation>
+					<documentation>MARSHALL ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MK">
+				<annotation>
+					<documentation>MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF
+					</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ML">
+				<annotation>
+					<documentation>MALI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MM">
+				<annotation>
+					<documentation>MYANMAR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MN">
+				<annotation>
+					<documentation>MONGOLIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MO">
+				<annotation>
+					<documentation>MACAO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MP">
+				<annotation>
+					<documentation>NORTHERN MARIANA ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MQ">
+				<annotation>
+					<documentation>MARTINIQUE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MR">
+				<annotation>
+					<documentation>MAURITANIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MS">
+				<annotation>
+					<documentation>MONTSERRAT</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MT">
+				<annotation>
+					<documentation>MALTA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MU">
+				<annotation>
+					<documentation>MAURITIUS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MV">
+				<annotation>
+					<documentation>MALDIVES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MW">
+				<annotation>
+					<documentation>MALAWI</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MX">
+				<annotation>
+					<documentation>MEXICO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MY">
+				<annotation>
+					<documentation>MALAYSIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MZ">
+				<annotation>
+					<documentation>MOZAMBIQUE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NA">
+				<annotation>
+					<documentation>NAMIBIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NC">
+				<annotation>
+					<documentation>NEW CALEDONIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NE">
+				<annotation>
+					<documentation>NIGER</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NF">
+				<annotation>
+					<documentation>NORFOLK ISLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NG">
+				<annotation>
+					<documentation>NIGERIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NI">
+				<annotation>
+					<documentation>NICARAGUA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NL">
+				<annotation>
+					<documentation>NETHERLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NO">
+				<annotation>
+					<documentation>NORWAY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NP">
+				<annotation>
+					<documentation>NEPAL</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NR">
+				<annotation>
+					<documentation>NAURU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NU">
+				<annotation>
+					<documentation>NIUE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NZ">
+				<annotation>
+					<documentation>NEW ZEALAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="OM">
+				<annotation>
+					<documentation>OMAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PA">
+				<annotation>
+					<documentation>PANAMA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PE">
+				<annotation>
+					<documentation>PERU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PF">
+				<annotation>
+					<documentation>FRENCH POLYNESIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PG">
+				<annotation>
+					<documentation>PAPUA NEW GUINEA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PH">
+				<annotation>
+					<documentation>PHILIPPINES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PK">
+				<annotation>
+					<documentation>PAKISTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PL">
+				<annotation>
+					<documentation>POLAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PM">
+				<annotation>
+					<documentation>SAINT PIERRE AND MIQUELON</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PN">
+				<annotation>
+					<documentation>PITCAIRN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PR">
+				<annotation>
+					<documentation>PUERTO RICO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PS">
+				<annotation>
+					<documentation>PALESTINIAN TERRITORY, OCCUPIED
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PT">
+				<annotation>
+					<documentation>PORTUGAL</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PW">
+				<annotation>
+					<documentation>PALAU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PY">
+				<annotation>
+					<documentation>PARAGUAY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="QA">
+				<annotation>
+					<documentation>QATAR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RE">
+				<annotation>
+					<documentation>REUNION</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RO">
+				<annotation>
+					<documentation>ROMANIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RS">
+				<annotation>
+					<documentation>SERBIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RU">
+				<annotation>
+					<documentation>RUSSIAN FEDERATION</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RW">
+				<annotation>
+					<documentation>RWANDA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SA">
+				<annotation>
+					<documentation>SAUDI ARABIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SB">
+				<annotation>
+					<documentation>SOLOMON ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SC">
+				<annotation>
+					<documentation>SEYCHELLES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SD">
+				<annotation>
+					<documentation>SUDAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SE">
+				<annotation>
+					<documentation>SWEDEN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SG">
+				<annotation>
+					<documentation>SINGAPORE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SH">
+				<annotation>
+					<documentation>SAINT HELENA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SI">
+				<annotation>
+					<documentation>SLOVENIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SJ">
+				<annotation>
+					<documentation>SVALBARD AND JAN MAYEN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SK">
+				<annotation>
+					<documentation>SLOVAKIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SL">
+				<annotation>
+					<documentation>SIERRA LEONE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SM">
+				<annotation>
+					<documentation>SAN MARINO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SN">
+				<annotation>
+					<documentation>SENEGAL</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SO">
+				<annotation>
+					<documentation>SOMALIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SR">
+				<annotation>
+					<documentation>SURINAME</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ST">
+				<annotation>
+					<documentation>SAO TOME AND PRINCIPE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SV">
+				<annotation>
+					<documentation>EL SALVADOR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SY">
+				<annotation>
+					<documentation>SYRIAN ARAB REPUBLIC</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SZ">
+				<annotation>
+					<documentation>SWAZILAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TC">
+				<annotation>
+					<documentation>TURKS AND CAICOS ISLANDS</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TD">
+				<annotation>
+					<documentation>CHAD</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TF">
+				<annotation>
+					<documentation>FRENCH SOUTHERN TERRITORIES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TG">
+				<annotation>
+					<documentation>TOGO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TH">
+				<annotation>
+					<documentation>THAILAND</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TJ">
+				<annotation>
+					<documentation>TAJIKISTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TK">
+				<annotation>
+					<documentation>TOKELAU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TL">
+				<annotation>
+					<documentation>TIMOR-LESTE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TM">
+				<annotation>
+					<documentation>TURKMENISTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TN">
+				<annotation>
+					<documentation>TUNISIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TO">
+				<annotation>
+					<documentation>TONGA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TR">
+				<annotation>
+					<documentation>TURKEY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TT">
+				<annotation>
+					<documentation>TRINIDAD AND TOBAGO</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TV">
+				<annotation>
+					<documentation>TUVALU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TW">
+				<annotation>
+					<documentation>TAIWAN, PROVINCE OF CHINA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TZ">
+				<annotation>
+					<documentation>TANZANIA, UNITED REPUBLIC OF</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UA">
+				<annotation>
+					<documentation>UKRAINE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UG">
+				<annotation>
+					<documentation>UGANDA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UM">
+				<annotation>
+					<documentation>UNITED STATES MINOR OUTLYING ISLANDS
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="US">
+				<annotation>
+					<documentation>UNITED STATES</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UY">
+				<annotation>
+					<documentation>URUGUAY</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UZ">
+				<annotation>
+					<documentation>UZBEKISTAN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VA">
+				<annotation>
+					<documentation>HOLY SEE (VATICAN CITY STATE)
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VC">
+				<annotation>
+					<documentation>SAINT VINCENT AND THE GRENADINES
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VE">
+				<annotation>
+					<documentation>VENEZUELA, PLURINATIONAL STATE OF
+							</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VG">
+				<annotation>
+					<documentation>VIRGIN ISLANDS, BRITISH</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VI">
+				<annotation>
+					<documentation>VIRGIN ISLANDS, U.S.</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VN">
+				<annotation>
+					<documentation>VIET NAM</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VU">
+				<annotation>
+					<documentation>VANUATU</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="WF">
+				<annotation>
+					<documentation>WALLIS AND FUTUNA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="WS">
+				<annotation>
+					<documentation>SAMOA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="YE">
+				<annotation>
+					<documentation>YEMEN</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="YT">
+				<annotation>
+					<documentation>MAYOTTE</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ZA">
+				<annotation>
+					<documentation>SOUTH AFRICA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ZM">
+				<annotation>
+					<documentation>ZAMBIA</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ZW">
+				<annotation>
+					<documentation>ZIMBABWE</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="currency">
+		<annotation>
+			<documentation>ISO 4217:2008</documentation>
+		</annotation>
+		<restriction base="NMTOKEN">
+			<enumeration value="AED">
+				<annotation>
+					<documentation>Dirham</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AFN">
+				<annotation>
+					<documentation>Afghani</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ALL">
+				<annotation>
+					<documentation>Lek</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AMD">
+				<annotation>
+					<documentation>Dram</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ANG">
+				<annotation>
+					<documentation>Netherlands Antillian Guilder</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AOA">
+				<annotation>
+					<documentation>Kwanza</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ARS">
+				<annotation>
+					<documentation>Argentine Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AUD">
+				<annotation>
+					<documentation>Australian Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AWG">
+				<annotation>
+					<documentation>Aruban Guilder</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="AZN">
+				<annotation>
+					<documentation>Azerbaijanian Manat</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BAM">
+				<annotation>
+					<documentation>Convertible Mark</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BBD">
+				<annotation>
+					<documentation>Barbados Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BDT">
+				<annotation>
+					<documentation>Taka</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BGN">
+				<annotation>
+					<documentation>Bulgarian Lev</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BHD">
+				<annotation>
+					<documentation>Bahraini Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BIF">
+				<annotation>
+					<documentation>Burundi Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BMD">
+				<annotation>
+					<documentation>Bermudian Dollar (customarily: Bermuda Dollar)
+					</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BND">
+				<annotation>
+					<documentation>Brunei Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BOB">
+				<annotation>
+					<documentation>Boliviano</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BRL">
+				<annotation>
+					<documentation>Brazilian Real</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BSD">
+				<annotation>
+					<documentation>Bahamian Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BTN">
+				<annotation>
+					<documentation>Ngultrum</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BWP">
+				<annotation>
+					<documentation>Pula</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BYR">
+				<annotation>
+					<documentation>Belarussian Ruble</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="BZD">
+				<annotation>
+					<documentation>Belize Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CAD">
+				<annotation>
+					<documentation>Canadian Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CDF">
+				<annotation>
+					<documentation>Franc Congolais</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CHF">
+				<annotation>
+					<documentation>Swiss Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CLP">
+				<annotation>
+					<documentation>Chilean Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CNY">
+				<annotation>
+					<documentation>Yuan Renminbi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="COP">
+				<annotation>
+					<documentation>Colombian Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CRC">
+				<annotation>
+					<documentation>Costa Rican Colon</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CUP">
+				<annotation>
+					<documentation>Cuban Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CVE">
+				<annotation>
+					<documentation>Cape Verde Escudo</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="CZK">
+				<annotation>
+					<documentation>Czech Koruna</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DJF">
+				<annotation>
+					<documentation>Djibouti Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DKK">
+				<annotation>
+					<documentation>Danish Krone</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DOP">
+				<annotation>
+					<documentation>Dominican Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="DZD">
+				<annotation>
+					<documentation>Algerian Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EEK">
+				<annotation>
+					<documentation>Kroon</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EGP">
+				<annotation>
+					<documentation>Egyptian Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ERN">
+				<annotation>
+					<documentation>Nakfa</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ETB">
+				<annotation>
+					<documentation>Ethopian Birr</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="EUR">
+				<annotation>
+					<documentation>Euro</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FJD">
+				<annotation>
+					<documentation>Fiji Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="FKP">
+				<annotation>
+					<documentation>Falkland Islands Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GBP">
+				<annotation>
+					<documentation>Pound Sterling</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GEL">
+				<annotation>
+					<documentation>Lari</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GHS">
+				<annotation>
+					<documentation>Cedi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GIP">
+				<annotation>
+					<documentation>Gibraltar Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GMD">
+				<annotation>
+					<documentation>Dalasi</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GNF">
+				<annotation>
+					<documentation>Guinea Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GTQ">
+				<annotation>
+					<documentation>Quetzal</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GYD">
+				<annotation>
+					<documentation>Guyana Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="GWP">
+				<annotation>
+					<documentation>Guinea-Bisau Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HKD">
+				<annotation>
+					<documentation>Honk Kong Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HNL">
+				<annotation>
+					<documentation>Lempira</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HRK">
+				<annotation>
+					<documentation>Kuna</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HTG">
+				<annotation>
+					<documentation>Gourde</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="HUF">
+				<annotation>
+					<documentation>Forint</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IDR">
+				<annotation>
+					<documentation>Rupiah</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ILS">
+				<annotation>
+					<documentation>New Israeli Sheqel</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="INR">
+				<annotation>
+					<documentation>Indian Rupee</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IQD">
+				<annotation>
+					<documentation>Iraqi Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="IRR">
+				<annotation>
+					<documentation>Iranian Rial</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ISK">
+				<annotation>
+					<documentation>Iceland Krona</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JMD">
+				<annotation>
+					<documentation>Jamaican Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JOD">
+				<annotation>
+					<documentation>Jordanian Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="JPY">
+				<annotation>
+					<documentation>Yen</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KES">
+				<annotation>
+					<documentation>Kenyan Shilling</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KGS">
+				<annotation>
+					<documentation>Som</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KHR">
+				<annotation>
+					<documentation>Riel</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KMF">
+				<annotation>
+					<documentation>Comoro Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KPW">
+				<annotation>
+					<documentation>North Korean Won</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KRW">
+				<annotation>
+					<documentation>Won</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KWD">
+				<annotation>
+					<documentation>Kuwaiti Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KYD">
+				<annotation>
+					<documentation>Cayman Islands Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="KZT">
+				<annotation>
+					<documentation>Tenge</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LAK">
+				<annotation>
+					<documentation>Kip</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LBP">
+				<annotation>
+					<documentation>Lebanese Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LKR">
+				<annotation>
+					<documentation>Sri Lanka Rupee</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LRD">
+				<annotation>
+					<documentation>Liberian Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LSL">
+				<annotation>
+					<documentation>Loti</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LTL">
+				<annotation>
+					<documentation>Lithuanian Litas</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LVL">
+				<annotation>
+					<documentation>Latvian Lats</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="LYD">
+				<annotation>
+					<documentation>Libyan Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MAD">
+				<annotation>
+					<documentation>Morrocan Dirham</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MDL">
+				<annotation>
+					<documentation>Moldovan Leu</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MGA">
+				<annotation>
+					<documentation>Malagasy Ariary</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MKD">
+				<annotation>
+					<documentation>Denar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MMK">
+				<annotation>
+					<documentation>Kyat</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MNT">
+				<annotation>
+					<documentation>Tugrik</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MOP">
+				<annotation>
+					<documentation>Pataca</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MRO">
+				<annotation>
+					<documentation>Ouguiya</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MUR">
+				<annotation>
+					<documentation>Mauritius Rupee</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MVR">
+				<annotation>
+					<documentation>Rufiyaa</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MWK">
+				<annotation>
+					<documentation>Kwacha</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MXN">
+				<annotation>
+					<documentation>Mexican Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MYR">
+				<annotation>
+					<documentation>Malaysian Ringgit</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="MZN">
+				<annotation>
+					<documentation>Metical</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NAD">
+				<annotation>
+					<documentation>Namibia Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NGN">
+				<annotation>
+					<documentation>Naira</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NIO">
+				<annotation>
+					<documentation>Cordoba Oro</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NOK">
+				<annotation>
+					<documentation>Norwegian Krone</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NPR">
+				<annotation>
+					<documentation>Nepalese Rupee</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="NZD">
+				<annotation>
+					<documentation>New Zealand Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="OMR">
+				<annotation>
+					<documentation>Rial Omani</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PAB">
+				<annotation>
+					<documentation>Balboa</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PEN">
+				<annotation>
+					<documentation>Nuevo Sol</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PGK">
+				<annotation>
+					<documentation>Kina</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PHP">
+				<annotation>
+					<documentation>Philippine Peso</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PKR">
+				<annotation>
+					<documentation>Pakistan Rupee</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PLN">
+				<annotation>
+					<documentation>Zloty</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="PYG">
+				<annotation>
+					<documentation>Guarani</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="QAR">
+				<annotation>
+					<documentation>Qatari Rial</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RON">
+				<annotation>
+					<documentation>New Leu</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RSD">
+				<annotation>
+					<documentation>Serbian Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RUB">
+				<annotation>
+					<documentation>Russian Ruble</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="RWF">
+				<annotation>
+					<documentation>Rwanda Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SAR">
+				<annotation>
+					<documentation>Saudi Riyal</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SBD">
+				<annotation>
+					<documentation>Solomon Islands Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SCR">
+				<annotation>
+					<documentation>Seychelles Rupee</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SDG">
+				<annotation>
+					<documentation>Sudanese Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SEK">
+				<annotation>
+					<documentation>Swedish Krona</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SGD">
+				<annotation>
+					<documentation>Singapore Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SHP">
+				<annotation>
+					<documentation>St. Helena Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SKK">
+				<annotation>
+					<documentation>Slovak Koruna</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SLL">
+				<annotation>
+					<documentation>Leone</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SOS">
+				<annotation>
+					<documentation>Somali Shilling</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SRD">
+				<annotation>
+					<documentation>Suriname Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="STD">
+				<annotation>
+					<documentation>Dobra</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SVC">
+				<annotation>
+					<documentation>El Salvador Colon</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SYP">
+				<annotation>
+					<documentation>Syrian Pound</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="SZL">
+				<annotation>
+					<documentation>Lilangeni</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="THB">
+				<annotation>
+					<documentation>Baht</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TJS">
+				<annotation>
+					<documentation>Somoni</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TMM">
+				<annotation>
+					<documentation>Manat</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TND">
+				<annotation>
+					<documentation>Tunisian Dinar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TOP">
+				<annotation>
+					<documentation>Pa'anga</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TRY">
+				<annotation>
+					<documentation>New Turkish Lira</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TTD">
+				<annotation>
+					<documentation>Trinidad and Tobago Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TWD">
+				<annotation>
+					<documentation>New Taiwan Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="TZS">
+				<annotation>
+					<documentation>Tanzanian Shilling</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UAH">
+				<annotation>
+					<documentation>Hryvnia</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UGX">
+				<annotation>
+					<documentation>Uganda Shilling</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="USD">
+				<annotation>
+					<documentation>US Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UYU">
+				<annotation>
+					<documentation>Peso Uruguayo</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="UZS">
+				<annotation>
+					<documentation>Uzbekistan Sum</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VEF">
+				<annotation>
+					<documentation>Bolivar Fuerte</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VND">
+				<annotation>
+					<documentation>Dong</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="VUV">
+				<annotation>
+					<documentation>Vatu</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="WST">
+				<annotation>
+					<documentation>Tala</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XAF">
+				<annotation>
+					<documentation>CFA Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XAG">
+				<annotation>
+					<documentation>Silver</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XAU">
+				<annotation>
+					<documentation>Gold</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XCD">
+				<annotation>
+					<documentation>East Carribean Dollar</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XDR">
+				<annotation>
+					<documentation>SDR</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XOF">
+				<annotation>
+					<documentation>CFA Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XPD">
+				<annotation>
+					<documentation>Palladium</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XPF">
+				<annotation>
+					<documentation>CFP Franc</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="XPT">
+				<annotation>
+					<documentation>Platinum</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="YER">
+				<annotation>
+					<documentation>Yemeni Rial</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ZAR">
+				<annotation>
+					<documentation>Rand</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ZMK">
+				<annotation>
+					<documentation>Kwacha</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="ZWR">
+				<annotation>
+					<documentation>Zimbabwe Dollar</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+
+
+</schema>
